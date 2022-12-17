@@ -1,13 +1,24 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    connection_pool (2.3.0)
+    hoe (4.0.0)
+      rake (>= 0.8, < 15.0)
     rake (13.0.6)
+    redis (5.0.5)
+      redis-client (>= 0.9.0)
+    redis-client (0.11.2)
+      connection_pool
+    test-unit (1.2.3)
+      hoe (>= 1.5.1)
 
 PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
   rake (~> 13.0)
+  redis (= 5.0.5)
+  test-unit (= 1.2.3)
 
 BUNDLED WITH
    2.3.26
