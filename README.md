@@ -1,8 +1,16 @@
 # gorse-rb
 
 [![Ruby](https://github.com/gorse-io/gorse-rb/actions/workflows/ci.yml/badge.svg)](https://github.com/gorse-io/gorse-rb/actions/workflows/ci.yml)
+[![Gem](https://img.shields.io/gem/v/gorse)](https://rubygems.org/gems/gorse)
+[![Gem](https://img.shields.io/gem/dt/gorse)](https://rubygems.org/gems/gorse)
 
 Ruby SDK for gorse recommender system
+
+## Install
+
+```bash
+gem install gorse
+```
 
 ## Usage
 
