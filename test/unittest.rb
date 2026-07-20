@@ -117,4 +117,16 @@ class TestGorse < Test::Unit::TestCase
     assert_equal('918', recommendations[2]['Id'])
   end
 
+  def test_recommend_with_multiple_categories
+    @client.insert_user({ 'UserId' => '4000' })
+    recommendations = @client.get_recommend(
+      '4000', category: ['Drama', 'Comedy'], n: 3, offset: 0,
+      write_back_type: 'recommend', write_back_delay: '1h')
+    assert_equal(3, recommendations.length)
+    recommendations.each do |recommendation|
+      item = @client.get_item(recommendation['Id'])
+      assert(!(['Drama', 'Comedy'] & item['Categories']).empty?)
+    end
+  end
+
 end
